@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XERNXVBLJ4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XERNXVBLJ4');
+    </script>
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "pbldbrga67");
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/favicon-transparent.png" />
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/favicon-transparent.png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5808709323793475"
+     crossorigin="anonymous"></script>
+    <title>breakium</title>
+    <style>
+      @font-face {
+        font-family: "FONT2";
+        src: url("https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/fonts/AlteHaasGroteskRegular.ttf");
+      }
+
+      :root {
+        --bg: #121113;
+        --bar: #19171a;
+        --tab-idle: rgba(255, 255, 255, 0.035);
+        --tab-hover: rgba(255, 255, 255, 0.07);
+        --tab-active: #262227;
+        --text: #eee8e1;
+        --text-muted: #8a8a96;
+        --hairline: rgba(255, 255, 255, 0.06);
+        --signal: #3d9be8;
+      }
+
+      * {
+        font-family: "FONT2", sans-serif;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+      }
+
+      .container {
+        position: relative;
+        width: 100vw;
+        height: 42px;
+      }
+      #tabcontainer {
+        width: 100%;
+        height: 42px;
+        background: var(--bar);
+        border-bottom: 1px solid var(--hairline);
+        padding: 7px 10px 0 10px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+      }
+
+      #tabs {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        gap: 2px;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+      #tabs::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      #tabs::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 3px;
+      }
+
+      button {
+        background: none;
+        color: var(--text-muted);
+        border: 0;
+        cursor: pointer;
+        transition: background-color 0.15s ease, color 0.15s ease;
+      }
+
+      #tab { height: 32px; min-width: 168px; max-width: 220px; display: flex; align-items: center; justify-content: space-between; margin: 0 1px; padding: 0 8px 0 28px; font-size: 12.5px; font-weight: 500; text-align: left; white-space: nowrap; background-color: var(--tab-idle); background-repeat: no-repeat; background-position: 10px center; background-size: 14px; border-radius: 8px 8px 0 0; flex-shrink: 0; }
+      .tab-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+      .tab-close { width: 22px; height: 22px; min-width: 22px; margin-left: 6px; border-radius: 50%; font-size: 15px; line-height: 1; color: var(--text-muted); flex-shrink: 0; }
+      .tab-close:hover { background-color: var(--tab-hover); color: var(--text); }
+
+      .active {
+        background-color: var(--tab-active) !important;
+        color: var(--text);
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+      }
+      .active::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: -1px;
+        height: 2px;
+        background: var(--signal);
+        border-radius: 2px;
+        box-shadow: 0 0 6px 0 rgba(61, 155, 232, 0.55);
+      }
+      #plus { width: 28px; height: 28px; min-width: 28px; margin-bottom: 2px; border-radius: 50%; font-size: 15px; line-height: 1; flex-shrink: 0; }
+      #plus:hover { background-color: var(--tab-hover); color: var(--text); }
+
+      #x {
+        margin-left: 8px;
+        margin-right: 6px;
+        color: var(--text-muted);
+      }
+      iframe {
+        width: 100vw;
+        height: calc(100vh - 92px);
+        border: none;
+        z-index: 0;
+        position: absolute;
+        top: 92px;
+        left: 0;
+        display: none;
+        background: var(--bg);
+      }
+
+      .active-iframe {
+        display: block;
+      }
+
+      #icon {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      #captcha-gate {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+        font-family: system-ui, sans-serif;
+        color: #eee;
+        transition: opacity 0.7s ease;
+      }
+      #captcha-gate.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #captcha-bg-canvas {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        display: block;
+      }
+      .captcha-box {
+        background: #1a1d23;
+        padding: 2.5rem 3rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+      .captcha-box h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+      }
+      .captcha-checkbox-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: #22262e;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .captcha-checkbox-row input {
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+      }
+      #captcha-status {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #8a8f98;
+        min-height: 1.2em;
+      }
+
+      #site-content {
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+      #site-content.visible {
+        opacity: 1;
+      }
+
+      .top-spot { width: 100%; height: 50px; display: flex; align-items: center; justify-content: center; padding: 8px 12px; background: rgba(25, 23, 26, 0.96); border-bottom: 1px solid var(--hairline); position: relative; z-index: 3; }
+      .top-spot-enclosure { display: flex; align-items: center; gap: 4px; max-width: 100%; }
+      .buttin { width: 30px; height: 30px; padding: 5px; cursor: pointer; border-radius: 6px; }
+      .buttin:hover { background: var(--tab-hover); }
+      .buttin img { width: 20px; height: 20px; object-fit: contain; filter: invert(1); }
+      .slashapp { position: relative; width: min(70vw, 1080px); margin: 0 6px; }
+      #uv-form { margin: 0; }
+      .slashapp_ { width: 100%; height: 30px; padding: 0 12px; border: 1px solid var(--hairline); border-radius: 6px; background: #0f0e10; color: var(--text); font: inherit; }
+      .slashapp_:focus { outline: 1px solid var(--signal); }
+      #suggestions-box { display: none; position: absolute; top: 34px; left: 0; right: 0; z-index: 4; background: var(--bar); border: 1px solid var(--hairline); }
+      .suggestion-item { padding: 8px 12px; cursor: pointer; }
+      .suggestion-item:hover { background: var(--tab-hover); }
+      @media (max-width: 600px) { .top-spot { justify-content: flex-start; overflow-x: auto; } .slashapp { width: 45vw; min-width: 130px; } }
+    </style>
+  </head>
+  <body>
+    <div id="captcha-gate">
+      <canvas id="captcha-bg-canvas"></canvas>
+      <div class="captcha-box">
+        <h1>Making sure ur not a robot</h1>
+        <label class="captcha-checkbox-row">
+          <input type="checkbox" id="humanCheck" />
+          <span>i AM a real person :)</span>
+        </label>
+        <div id="captcha-status">just click it bra</div>
+      </div>
+    </div>
+    <div id="site-content">
+      <div class="container">
+        <div id="tabcontainer">
+          <div id="tabs">
+            <button id="plus">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="top-spot">
+        <div class="top-spot-enclosure">
+          <button class="buttin" id="homeButton" type="button"><img src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/svg/home.svg" alt="Home"></button>
+          <button class="buttin" id="backButton" type="button"><img src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/svg/left.svg" alt="Back"></button>
+          <button class="buttin" id="reloadButton" type="button"><img src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/svg/reload.svg" alt="Reload"></button>
+          <button class="buttin" id="forwardButton" type="button"><img src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/svg/right.svg" alt="Forward"></button>
+          <div class="slashapp"><form id="uv-form"><input placeholder="type as you must" id="uv-address" class="slashapp_" type="text" autocomplete="off"></form><div id="suggestions-box"></div></div>
+          <button class="buttin" id="fullscreenButton" type="button"><img src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/svg/fullscreen.svg" alt="Fullscreen"></button>
+          <button class="buttin" id="openButton" type="button"><img src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/svg/idk.png" alt="Open in new window"></button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var gate = document.getElementById("captcha-gate");
+        var siteContent = document.getElementById("site-content");
+        var checkbox = document.getElementById("humanCheck");
+        var status = document.getElementById("captcha-status");
+        var mouseMoved = false;
+        var alreadyVerified = sessionStorage.getItem("humanVerified") === "true";
+
+        function revealSite() {
+          gate.classList.add("hidden");
+          siteContent.classList.add("visible");
+          setTimeout(function () {
+            gate.style.display = "none";
+          }, 700);
+        }
+
+        if (alreadyVerified) {
+          revealSite();
+          return;
+        }
+
+        document.addEventListener(
+          "mousemove",
+          function () {
+            mouseMoved = true;
+          },
+          { once: true }
+        );
+
+        checkbox.addEventListener("change", function () {
+          if (!checkbox.checked) return;
+
+          if (!mouseMoved) {
+            status.textContent = "Hmm, that didn't look human. Try again.";
+            checkbox.checked = false;
+            return;
+          }
+
+          status.textContent = "verifying..";
+          checkbox.disabled = true;
+
+          setTimeout(function () {
+            sessionStorage.setItem("humanVerified", "true");
+            sessionStorage.setItem("verifiedAt", Date.now().toString());
+            status.textContent = "verified!";
+            setTimeout(revealSite, 400);
+          }, 800);
+        });
+      })();
+
+      (function () {
+        var canvas = document.getElementById("captcha-bg-canvas");
+        if (!canvas) return;
+        var ctx = canvas.getContext("2d");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        var width, height, dpr;
+        var particles = [];
+        var mouse = { x: null, y: null };
+        var accentRgb = [232, 163, 61];
+
+        function resize() {
+          dpr = window.devicePixelRatio || 1;
+          width = window.innerWidth;
+          height = window.innerHeight;
+          canvas.width = width * dpr;
+          canvas.height = height * dpr;
+          canvas.style.width = width + "px";
+          canvas.style.height = height + "px";
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+          var count = Math.min(Math.round((width * height) / 16000), 90);
+          particles = Array.from({ length: count }, function () {
+            return {
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - 0.5) * 0.25,
+              vy: (Math.random() - 0.5) * 0.25,
+              r: Math.random() * 1.3 + 0.6
+            };
+          });
+        }
+
+        function frame() {
+          var gate = document.getElementById("captcha-gate");
+          if (!gate || gate.style.display === "none") return;
+
+          var r = accentRgb[0],
+            g = accentRgb[1],
+            b = accentRgb[2];
+          ctx.clearRect(0, 0, width, height);
+
+          for (var i = 0; i < particles.length; i++) {
+            var p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (mouse.x !== null) {
+              var dx = p.x - mouse.x;
+              var dy = p.y - mouse.y;
+              var dist = Math.hypot(dx, dy);
+              if (dist < 120 && dist > 0.01) {
+                var force = (120 - dist) / 120;
+                p.x += (dx / dist) * force * 1.6;
+                p.y += (dy / dist) * force * 1.6;
+              }
+            }
+
+            if (p.x < -10) p.x = width + 10;
+            if (p.x > width + 10) p.x = -10;
+            if (p.y < -10) p.y = height + 10;
+            if (p.y > height + 10) p.y = -10;
+          }
+
+          for (var i2 = 0; i2 < particles.length; i2++) {
+            for (var j = i2 + 1; j < particles.length; j++) {
+              var a = particles[i2],
+                p2 = particles[j];
+              var dist2 = Math.hypot(a.x - p2.x, a.y - p2.y);
+              if (dist2 < 130) {
+                ctx.strokeStyle = "rgba(" + r + "," + g + "," + b + "," + (0.1 * (1 - dist2 / 130)) + ")";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.stroke();
+              }
+            }
+          }
+
+          for (var i3 = 0; i3 < particles.length; i3++) {
+            var p3 = particles[i3];
+            ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ",0.4)";
+            ctx.beginPath();
+            ctx.arc(p3.x, p3.y, p3.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          if (!reduceMotion) requestAnimationFrame(frame);
+        }
+
+        function handlePointer(e) {
+          var point = e.touches ? e.touches[0] : e;
+          mouse.x = point.clientX;
+          mouse.y = point.clientY;
+        }
+
+        window.addEventListener("resize", resize);
+        window.addEventListener("mousemove", handlePointer);
+        window.addEventListener("touchmove", handlePointer, { passive: true });
+        window.addEventListener("mouseleave", function () {
+          mouse.x = null;
+          mouse.y = null;
+        });
+
+        resize();
+        frame();
+      })();
+
+      const tc = document.getElementById("tabcontainer"),
+        ts = document.getElementById("tabs"),
+        p = document.getElementById("plus");
+      let at = [],
+        ai = [];
+
+      function createTab() {
+        let t = document.createElement("button"),
+          f = document.createElement("iframe"),
+          c = document.createElement("button"),
+          n = document.createElement("span");
+        t.id = "tab";
+        n.className = "tab-title";
+        n.textContent = "Loading..";
+        c.className = "tab-close";
+        c.textContent = "×";
+        t.append(n, c);
+        f.src = "/null";
+        setInterval(() => {
+          try {
+            let x = f.contentWindow.document.getElementById("fram");
+            if (!x) return;
+            n.textContent = x.contentDocument.title || "New Tab";
+            let i = x.contentDocument.querySelector('link[rel="icon"]');
+            t.style.backgroundImage = `url(${i ? i.href : "https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/tabs/icon.png"})`;
+          } catch {
+            n.textContent = "New Tab";
+            t.style.backgroundImage = "url(https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/images/tabs/icon.png)";
+          }
+        }, 1000);
+        tc.appendChild(f);
+        ts.insertBefore(t, p);
+        t.onclick = () => a(t, f);
+        c.onclick = (e) => {
+          e.stopPropagation();
+          d(t, f);
+        };
+        a(t, f);
+      }
+
+      function a(t, f) {
+        at.forEach((x) => x.classList.remove("active"));
+        ai.forEach((x) => x.classList.remove("active-iframe"));
+        at = at.filter((x) => x != t);
+        ai = ai.filter((x) => x != f);
+        at.push(t);
+        ai.push(f);
+        t.classList.add("active");
+        f.classList.add("active-iframe");
+        window.dispatchEvent(new Event("active-tab-changed"));
+      }
+
+      function d(t, f) {
+        let w = t.classList.contains("active"),
+          i = at.indexOf(t);
+        if (i > -1) {
+          at.splice(i, 1);
+          ai.splice(i, 1);
+        }
+        t.remove();
+        f.remove();
+        if (w && at.length) a(at.at(-1), ai.at(-1));
+      }
+      p.onclick = createTab;
+      window.onload = createTab;
+
+      const toolbar = {
+        frame() {
+          const frame = ai.at(-1);
+          return frame && frame.contentWindow.tabFrameApi;
+        },
+        run(action) {
+          const api = toolbar.frame();
+          if (api && api[action]) api[action]();
+        }
+      };
+
+      document.getElementById("homeButton").onclick = () => toolbar.frame()?.navigate("/");
+      document.getElementById("backButton").onclick = () => toolbar.run("back");
+      document.getElementById("reloadButton").onclick = () => toolbar.run("reload");
+      document.getElementById("forwardButton").onclick = () => toolbar.run("forward");
+      document.getElementById("openButton").onclick = () => toolbar.run("open");
+      document.getElementById("fullscreenButton").onclick = () => document.documentElement.requestFullscreen?.();
+
+      document.getElementById("uv-form").onsubmit = (event) => {
+        event.preventDefault();
+        const api = toolbar.frame();
+        const value = document.getElementById("uv-address").value;
+        if (api && value) api.navigate(api.search(value));
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/js/loading.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/isolateam/echelon@main/public/data/js/urlupd.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/gh/docklib/v2@0970bd57190df32d1ddd99492464d78e31877bd1/partner-a88074f2.js"
+        data-w-bottom="10px"
+        data-w-left="10px"
+        async></script>-->
+  </body>
+</html>
